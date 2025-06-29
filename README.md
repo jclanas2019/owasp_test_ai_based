@@ -624,4 +624,12 @@ print(df)
 
 
 ## Conclusión
-Esta guía adapta los proyectos de ataque a LLMs descritos al estilo MITRE ATT&CK, proporcionando ejemplos prácticos para probar la seguridad de LLMs locales y en la nube. Los ejemplos cubren desde *jailbreaking* hasta inyecciones multimodales, siguiendo las recomendaciones de la Guía OWASP AI Testing. Para más detalles, consulta los repositorios citados y la documentación de MITRE ATLAS.
+El presente modelo establece un punto de inflexión necesario para organizaciones que adoptan inteligencia artificial en contextos críticos. A diferencia del enfoque tradicional centrado solo en precisión o desempeño estadístico, este marco operacional exige una validación integral que incorpore criterios éticos, regulatorios, técnicos y sociales. Es una respuesta concreta a la creciente preocupación sobre el impacto real de los algoritmos en la vida de las personas y en la legitimidad institucional.
+
+La arquitectura en capas y la secuencia operacional propuesta ofrecen un flujo claro, verificable y auditable para gobernar el ciclo completo de vida de los modelos, desde la definición de uso hasta su monitoreo en producción. Esto permite a las organizaciones no solo construir modelos técnicamente sólidos, sino también defender sus decisiones frente a entes reguladores, medios o la ciudadanía, alineándose con estándares internacionales como el AI Act y el GDPR.
+
+Uno de los aportes más relevantes es la formalización del testing de IA como un proceso multidimensional, que no se limita a métricas de precisión, sino que incluye análisis de sesgo, explicabilidad, robustez ante ataques adversariales y privacidad diferencial. En ese sentido, las herramientas sugeridas permiten instrumentar cada dominio con rigurosidad, mientras que los indicadores propuestos habilitan la trazabilidad y mejora continua.
+
+Las pruebas prácticas incluidas, especialmente para modelos de lenguaje, evidencian la urgencia de asumir nuevas formas de auditoría algorítmica. Ataques como prompt injection, jailbreaks o vulnerabilidades multimodales no son amenazas teóricas: ya están presentes en modelos en producción y requieren defensas activas, monitoreo constante y respuestas correctivas integradas.
+
+Finalmente, este modelo no es solo técnico: es una propuesta de gobernanza algorítmica institucional. Requiere que los equipos de IA trabajen coordinadamente con legal, compliance, ciberseguridad y ética, bajo el principio de que ningún algoritmo debe operar sin validación estructurada. En síntesis, habilita un desarrollo responsable de IA que combina innovación con protección, eficiencia con equidad y automatización con confianza pública.
