@@ -596,5 +596,32 @@ print(df)
 - **Research Papers**: Incluye PromptInject, LLM Self Defense y frameworks de defensa.[](https://arxiv.org/abs/2306.05499)[](https://arxiv.org/abs/2302.12173)
 - **MITRE ATLAS**: Marco de referencia para tácticas y técnicas de ataque a sistemas de IA, como LLM Prompt Injection (AML.T0051).[](https://genai.owasp.org/llmrisk/llm01-prompt-injection/)[](https://medium.com/%40adnanmasood/securing-large-language-models-a-mitre-atlas-playbook-5ed37e55111e)
 
+## Recursos Técnicos para Evaluación y Defensa ante Prompt Injection en LLM
+
+### 🔍 Índices y Datasets
+
+- **[Prompt-Injection (GitHub Topic)](https://github.com/topics/prompt-injection)**  
+  Índice curado de repositorios que demuestran vectores de inyección de prompts, herramientas de evaluación y técnicas defensivas.
+
+- **[Tensor Trust Dataset](https://arxiv.org/abs/2311.01011)**  
+  Colección masiva de ejemplos y patrones adversarios diseñados para testear LLMs mediante técnicas de inyección de prompt y manipulación semántica. Utilizable para entrenamiento de defensas o benchmarking de robustez.
+
+### 📚 Research Papers
+
+- **[PromptInject](https://arxiv.org/abs/2211.09527)**  
+  Estudio sistemático sobre ataques de inyección en prompts, categorización de vectores y metodologías para bypass.
+
+- **[LLM Self Defense](https://arxiv.org/abs/2311.12349)**  
+  Marco de defensa proactiva para LLMs que intercepta y mitiga comportamientos inadecuados inducidos por el prompt.
+
+- **[Defensive Frameworks](https://arxiv.org/abs/2401.11348)**  
+  Comparación de defensas supervisadas, verificación formal y runtime para proteger contra manipulación de entrada en modelos generativos.
+
+### 🧭 Marcos de Referencia
+
+- **[MITRE ATLAS - LLM Prompt Injection (AML.T0051)](https://atlas.mitre.org/attack/AML.T0051/)**  
+  Táctica formal reconocida en el marco MITRE ATLAS sobre amenazas a sistemas de aprendizaje automático. Describe los vectores de inyección en prompts de LLMs, ejemplos reales y recomendaciones de mitigación.
+
+
 ## Conclusión
 Esta guía adapta los proyectos de ataque a LLMs descritos al estilo MITRE ATT&CK, proporcionando ejemplos prácticos para probar la seguridad de LLMs locales y en la nube. Los ejemplos cubren desde *jailbreaking* hasta inyecciones multimodales, siguiendo las recomendaciones de la Guía OWASP AI Testing. Para más detalles, consulta los repositorios citados y la documentación de MITRE ATLAS.
