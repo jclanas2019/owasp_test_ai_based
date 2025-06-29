@@ -619,7 +619,7 @@ print(df)
 
 ### 🧭 Marcos de Referencia
 
-- **[MITRE ATLAS - LLM Prompt Injection (AML.T0051)]([https://atlas.mitre.org/attack/AML.T0051/](https://atlas.mitre.org/resources/info))**  
+- **[MITRE ATLAS - LLM Prompt Injection (AML.T0051)](https://atlas.mitre.org/attack/AML.T0051/](https://atlas.mitre.org/resources/info)**  
   Táctica formal reconocida en el marco MITRE ATLAS sobre amenazas a sistemas de aprendizaje automático. Describe los vectores de inyección en prompts de LLMs, ejemplos reales y recomendaciones de mitigación.
 
 
