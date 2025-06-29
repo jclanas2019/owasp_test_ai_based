@@ -104,11 +104,10 @@ El modelo propuesto se compone de cinco capas integradas:
 
 Una guía profesional debe ser ejecutable, auditada y adaptable. El presente modelo ofrece un marco riguroso, pero operativo, que permite alinear prácticas de desarrollo, cumplimiento normativo y control estratégico en el despliegue de sistemas de IA. Requiere adopción transversal, gobernanza técnica y cultura organizacional madura. Aporta trazabilidad, prevención de riesgos y legitimidad social al uso de algoritmos en contextos reales.
 
-# Ejemplos Prácticos de Pruebas de LLMs Basados en la Guía OWASP AI Testing
 
 A continuación, se presentan ejemplos prácticos para probar modelos de lenguaje de gran escala (LLMs), incluyendo modelos locales y diversos, siguiendo las recomendaciones de la [Guía OWASP AI Testing](https://github.com/OWASP/www-project-ai-testing-guide). Los ejemplos están diseñados para abordar seguridad, ética y confiabilidad en aplicaciones de LLMs, como chatbots, asistentes de escritura o sistemas de moderación de contenido.
 
-## 1. Prueba de Robustez Adversarial en LLMs
+## 5. Prueba de Robustez Adversarial en LLMs
 ### Objetivo
 Evaluar si un LLM es resistente a entradas adversariales, como prompts manipulados diseñados para generar respuestas incorrectas, sesgadas o dañinas (por ejemplo, ataques de *prompt injection*).
 
@@ -155,7 +154,7 @@ df.to_csv("resultados_robustez.csv", index=False)
 print(df[["prompt", "respuesta"]])
 ```
 
-## 2. Validación de Datos de Entrada para Fine-Tuning de LLMs
+## 6. Validación de Datos de Entrada para Fine-Tuning de LLMs
 ### Objetivo
 Asegurar que los datos utilizados para entrenar o ajustar un LLM (por ejemplo, en *fine-tuning*) sean de alta calidad y no introduzcan sesgos o vulnerabilidades.
 
@@ -197,7 +196,7 @@ datos_limpios = datos[datos["longitud"] >= 3]
 datos_limpios.to_csv("comentarios_limpios.csv", index=False)
 ```
 
-## 3. Evaluación de Equidad en Respuestas de LLMs
+## 7. Evaluación de Equidad en Respuestas de LLMs
 ### Objetivo
 Garantizar que las respuestas del LLM no muestren sesgos hacia grupos protegidos (por ejemplo, género, etnia o edad).
 
@@ -246,7 +245,7 @@ print("Polaridad promedio femenino:", df[df["grupo"] == "femenino"]["polaridad"]
 print("Polaridad promedio masculino:", df[df["grupo"] == "masculino"]["polaridad"].mean())
 ```
 
-## 4. Monitoreo Continuo de Rendimiento de LLMs
+## 8. Monitoreo Continuo de Rendimiento de LLMs
 ### Objetivo
 Asegurar que un LLM en producción mantenga su calidad de respuestas frente a cambios en los patrones de uso o datos de entrada.
 
@@ -293,11 +292,7 @@ else:
     print("Rendimiento estable.")
 ```
 
-# Guía de Pruebas de Seguridad para LLMs: Ataques al Estilo MITRE ATT&CK
-
-Esta guía proporciona ejemplos prácticos para probar la seguridad de modelos de lenguaje de gran escala (LLMs), siguiendo la [Guía OWASP AI Testing](https://github.com/OWASP/www-project-ai-testing-guide) y adaptando ataques descritos en proyectos como **PromptAttack**, **llm-attacks**, **AdvLLM**, **adversarial_MT_prompt_injection**, **awesome-prompt-injection** y **awesome-LVLM-Attack**. Los ejemplos se centran en evaluar vulnerabilidades de LLMs locales (como LLaMA) y en la nube (como Grok), inspirados en el marco MITRE ATT&CK para sistemas de IA.
-
-## 1. Prueba de Ataque con PromptAttack
+## 9. Prueba de Ataque con PromptAttack
 ### Descripción
 **PromptAttack** genera ataques adversariales textuales mediante prompts con tres componentes: input original (OI), objetivo de ataque (AO) y guía de perturbación (AG). Su objetivo es engañar al LLM para que realice clasificaciones incorrectas o genere contenido no deseado, simulando un "autofraude" del modelo.[](https://github.com/GodXuxilie/PromptAttack)
 
@@ -353,7 +348,7 @@ df.to_csv("resultados_promptattack.csv", index=False)
 print(df)
 ```
 
-## 2. Prueba de Ataque con llm-attacks (GCG)
+## 10. Prueba de Ataque con llm-attacks (GCG)
 ### Descripción
 **llm-attacks** implementa ataques adversariales universales y transferibles usando el método Greedy Coordinate Gradient (GCG) para generar *jailbreaks* en LLMs alineados, como LLaMA-2. Busca prompts que evadan restricciones de seguridad.[](https://lilianweng.github.io/posts/2023-10-25-adv-attack-llm/)
 
@@ -402,7 +397,7 @@ df.to_csv("resultados_llm_attacks.csv", index=False)
 print(df)
 ```
 
-## 3. Prueba de Ataque con AdvLLM
+## 11. Prueba de Ataque con AdvLLM
 ### Descripción
 **AdvLLM** genera prompts que activan reglas de seguridad internas para causar respuestas de rechazo o saturación (denial-of-service) en LLMs.[](https://lilianweng.github.io/posts/2023-10-25-adv-attack-llm/)
 
@@ -453,7 +448,7 @@ df.to_csv("resultados_advllm.csv", index=False)
 print(df)
 ```
 
-## 4. Prueba de Ataque con adversarial_MT_prompt_injection
+## 12. Prueba de Ataque con adversarial_MT_prompt_injection
 ### Descripción
 **adversarial_MT_prompt_injection** genera inyecciones de prompts maliciosos que se infiltran en plantillas de prompts, explotando la incapacidad del LLM para distinguir entre instrucciones legítimas y maliciosas.[](https://genai.owasp.org/llmrisk/llm01-prompt-injection/)[](https://www.paloaltonetworks.com/cyberpedia/what-is-a-prompt-injection-attack)
 
@@ -504,7 +499,7 @@ df.to_csv("resultados_prompt_injection.csv", index=False)
 print(df)
 ```
 
-## 5. Prueba con awesome-prompt-injection
+## 13. Prueba con awesome-prompt-injection
 ### Descripción
 **awesome-prompt-injection** es un repositorio curado con ejemplos de *jailbreaking*, fugas de prompts e inyecciones, útil como base de datos para pruebas de seguridad.[](https://github.com/FonduAI/awesome-prompt-injection)
 
@@ -551,7 +546,7 @@ df.to_csv("resultados_awesome_prompt_injection.csv", index=False)
 print(df)
 ```
 
-## 6. Prueba con awesome-LVLM-Attack
+## 14. Prueba con awesome-LVLM-Attack
 ### Descripción
 **awesome-LVLM-Attack** recopila herramientas y papers para atacar modelos multimodales (lenguaje + visión), explorando nuevos vectores de ataque como inyecciones en imágenes o texto combinado.[](https://github.com/liudaizong/Awesome-LVLM-Attack)
 
